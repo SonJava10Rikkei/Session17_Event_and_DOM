@@ -12,10 +12,10 @@ function Dong_ho() {
 var Dem_gio = setInterval(Dong_ho, 1000);
 
 var img = [];
-var img_1 = "https://d1hjkbq40fs2x4.cloudfront.net/2016-01-31/files/1045.jpg";
-var img_2 = "https://vtv1.mediacdn.vn/thumb_w/640/2018/11/29/photo-1-154348431990377584420.jpg";
-var img_3 = "https://cdn.tcdulichtphcm.vn/upload/3-2022/images/2022-09-15/1663230774-2-1663172227.jpg";
-var img_4 = "https://cdn.tcdulichtphcm.vn/upload/4-2022/images/2022-10-07/1665129082-1.jpg";
+var img_1 = "https://img.meta.com.vn/Data/image/2021/09/30/background-la-gi-anh-background-dep-4.jpg";
+var img_2 = "https://thuthuatnhanh.com/wp-content/uploads/2021/12/background-vu-tru-4K.jpg";
+var img_3 = "https://toigingiuvedep.vn/wp-content/uploads/2021/11/background-vu-tru-sang-tao.jpeg";
+var img_4 = "http://listsach.com/wp-content/uploads/2019/02/List-sach-hay-thien-van-hoc-vu-tru-va-cac-chom-sao.jpg";
 img.push(img_1);
 img.push(img_2);
 img.push(img_3);
@@ -24,10 +24,14 @@ function getImg() {
     let body = document.querySelector('body')
     const ramdom = Math.floor(Math.random() * img.length)
     body.background = img[ramdom];
-    body.style.backgroundsize = "cover";
+    body.style.backgroundsize = "100%";
 }
-setInterval(getImg, 5000);
+setInterval(getImg, 10000);
 
-// var music = [];
-// var music_1 = "";
+setTimeout(function () {
+    document.getElementById("tictac").play(); // chay audio tictac
+}, 1)
 
+// setInterval(function () {
+//     document.getElementById("my_audio").play();
+// }, 1000)
