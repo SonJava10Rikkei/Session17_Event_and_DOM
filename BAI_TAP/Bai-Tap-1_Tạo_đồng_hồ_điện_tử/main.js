@@ -32,6 +32,25 @@ setTimeout(function () {
     document.getElementById("tictac").play(); // chay audio tictac
 }, 1)
 
+
+
+
 // setInterval(function () {
 //     document.getElementById("my_audio").play();
 // }, 1000)
+
+
+var myAudio = [];
+var myAudio_1 = "";
+var myAudio_2 = "";
+var myAudio_3 = "";
+var myAudio_4 = "";
+img.push(myAudio_1);
+img.push(myAudio_2);
+img.push(myAudio_3);
+img.push(myAudio_4);
+function getAudio() {
+    let = document.querySelector('getAudio')
+
+}
+setInterval(getAudio, 1000);
