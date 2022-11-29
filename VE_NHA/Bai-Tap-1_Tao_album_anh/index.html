@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tao album anh</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Container for the image gallery -->
+    <div class="container">
+      <!-- Full-width images with number text -->
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="/img/1.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="/img/2.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="/img/3.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="/img/4.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="/img/5.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="/img/1.jpg" style="width: 100%" />
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <!-- Image text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <!-- Thumbnail images -->
+      <div class="row">
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="/img/1.jpg"
+            style="width: 100%"
+            onclick="currentSlide(1)"
+            alt="Ten anh 1"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="/img/2.jpg"
+            style="width: 100%"
+            onclick="currentSlide(2)"
+            alt="Ten anh 2"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="/img/3.jpg"
+            style="width: 100%"
+            onclick="currentSlide(3)"
+            alt="Ten anh 3"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="/img/4.jpg"
+            style="width: 100%"
+            onclick="currentSlide(4)"
+            alt="Ten anh 4"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="/img/5.jpg"
+            style="width: 100%"
+            onclick="currentSlide(5)"
+            alt="Ten anh 5"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="/img/1.jpg"
+            style="width: 100%"
+            onclick="currentSlide(6)"
+            alt="Ten anh 6"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./main.js"></script>
+</html>

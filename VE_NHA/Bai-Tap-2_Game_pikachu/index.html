@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+
+      td {
+        border: 1px solid black;
+        padding: 3px 5px;
+      }
+
+      td div {
+        cursor: pointer;
+      }
+
+      .doreamon {
+        background-color: red;
+      }
+
+      .nobita {
+        background-color: blue;
+      }
+
+      .xuka {
+        background-color: pink;
+      }
+
+      .xeko {
+        background-color: gold;
+      }
+
+      .mimi {
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="totalPoint"></div>
+    <table id="scratchTable">
+      <tr>
+        <td>
+          <div id="sc11" class="doreamon">1:1</div>
+        </td>
+        <td>
+          <div id="sc21" class="nobita">2:1</div>
+        </td>
+        <td>
+          <div id="sc31" class="xuka">3:1</div>
+        </td>
+        <td>
+          <div id="sc41" class="xuka">4:1</div>
+        </td>
+        <td>
+          <div id="sc51" class="xeko">5:1</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="nobi">1:2</div>
+        </td>
+        <td>
+          <div id="sc22" class="doreamon">2:2</div>
+        </td>
+        <td>
+          <div class="mimi">3:2</div>
+        </td>
+        <td>
+          <div class="chaiko">4:2</div>
+        </td>
+        <td>
+          <div class="star">5:2</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="nobita">1:3</div>
+        </td>
+        <td>
+          <div class="chaien">2:3</div>
+        </td>
+        <td>
+          <div class="mama">3:3</div>
+        </td>
+        <td>
+          <div class="dekhi">4:3</div>
+        </td>
+        <td>
+          <div class="doremi">5:3</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="nobito">1:4</div>
+        </td>
+        <td>
+          <div class="chaiko">2:4</div>
+        </td>
+        <td>
+          <div class="xeko">3:4</div>
+        </td>
+        <td>
+          <div class="nobi">4:4</div>
+        </td>
+        <td>
+          <div class="mimi">5:4</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="chaien">1:5</div>
+        </td>
+        <td>
+          <div class="mama">2:5</div>
+        </td>
+        <td>
+          <div class="nobito">3:5</div>
+        </td>
+        <td>
+          <div class="dekhi">4:5</div>
+        </td>
+        <td>
+          <div class="doremi">5:5</div>
+        </td>
+      </tr>
+    </table>
+    <script>
+      let table = document.body.firstElementChild;
+      let scratchForcus = "";
+      let scratchForcusId = "";
+      let totalPoint = 0;
+
+      let scratch = [
+        ["1.1", "2.1", "3.1", "4.1", "5.1"],
+        ["1.2", "2.2", "3.2", "4.2", "5.2"],
+        ["1.3", "2.3", "3.3", "4.3", "5.3"],
+        ["1.4", "2.4", "3.4", "4.4", "5.4"],
+        ["1.5", "2.5", "3.5", "4.5", "5.5"],
+      ];
+      document.getElementById("totalPoint").innerHTML = `Point: ${totalPoint}`;
+      //   console.log(scratch);
+      //   for (let index = 0; index < array.length; index++) {
+      //     const element = array[index];
+      //   }
+
+      function clickScratch(event) {
+        if (scratchForcus == "") {
+          scratchForcus = this.childNodes[0].className;
+          scratchForcusId = this.childNodes[0].id;
+          this.childNodes[0].style.textDecoration = "underline";
+        } else {
+          // console.log("Click me!");
+          console.log(scratchForcus + ": " + scratchForcusId);
+          console.log(
+            this.childNodes[0].className + ": " + this.childNodes[0].id
+          );
+
+          if (this.childNodes[0].className == scratchForcus) {
+            document.getElementById(scratchForcusId).remove();
+            this.childNodes[0].remove();
+            scratchForcus = "";
+            scratchForcusId = "";
+          } else {
+            // xoa bo tat ca div underline khi 2 scratch khong giong nhau
+            let allDivScratch = document.querySelectorAll(
+              "#scratchTable tr td div"
+            );
+            for (let index = 0; index < allDivScratch.length; index++) {
+              allDivScratch[index].style.textDecoration = "node";
+            }
+          }
+
+          // calculate matching
+
+          // add point
+          document.getElementById(
+            "totalPoint"
+          ).innerHTML = `Point: ${totalPoint}`;
+        }
+      }
+      let slt = document.querySelectorAll("#scratchTable tr td");
+      //   console.log(slt);
+      for (let i = 0; i < slt.length; i++) {
+        slt[i].addEventListener("click", clickScratch);
+      }
+
+      // your code
+    </script>
+  </body>
+</html>
