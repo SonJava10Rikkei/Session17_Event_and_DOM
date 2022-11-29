@@ -13,7 +13,7 @@ function Dong_ho() {
 var Dem_gio = setInterval(Dong_ho, 1000);
 
 var img = [];
-var img_1 = "https://img.meta.com.vn/Data/image/2021/09/30/background-la-gi-anh-background-dep-4.jpg";
+var img_1 = "https://img.meta.com.vn/Data/image/2021/09/30/background-la-gi-anh-background-de-4.jpg";
 var img_2 = "https://thuthuatnhanh.com/wp-content/uploads/2021/12/background-vu-tru-4K.jpg";
 var img_3 = "https://toigingiuvedep.vn/wp-content/uploads/2021/11/background-vu-tru-sang-tao.jpeg";
 
